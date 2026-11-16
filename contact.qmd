@@ -6,7 +6,7 @@ We zijn op zoek naar gesprekken met:
 
 - **Organisaties in Suriname** die hun beveiliging willen laten bewaken (pilotplekken beschikbaar in 2027)
 - **Werkgevers** die medewerkers willen laten opleiden
-- **Nederlandse SOC's en MSSP's** met behoefte aan avond- en nachtcapaciteit
+- **Telecom- en IT-bedrijven** die beveiligingsdiensten willen doorverkopen
 - **Partners en investeerders** voor de opstartfase
 
 <!-- TODO: e-mailadres invullen zodra domein/werknaam vaststaat -->
