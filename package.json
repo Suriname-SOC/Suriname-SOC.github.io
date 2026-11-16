@@ -1,0 +1,21 @@
+{
+  "name": "suriname-soc-site",
+  "private": true,
+  "description": "Website SOC Suriname: statische HTML met kwaliteitschecks",
+  "scripts": {
+    "serve": "http-server . -p 4173 -s",
+    "check:html": "html-validate index.html 404.html",
+    "check:spelling": "cspell --no-progress \"**/*.{html,md}\"",
+    "check:a11y": "playwright test",
+    "check:lighthouse": "lhci autorun"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@cspell/dict-nl-nl": "^2.4.0",
+    "@lhci/cli": "^0.14.0",
+    "@playwright/test": "^1.65.1",
+    "cspell": "^8.17.0",
+    "html-validate": "^9.4.0",
+    "http-server": "^14.1.1"
+  }
+}

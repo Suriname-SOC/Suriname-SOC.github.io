@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOC Suriname: SOC en Cyber Academy in Paramaribo</title>
+<meta name="description" content="Lokaal Security Operations Center en Cyber Academy in Paramaribo. Monitoring, incidentrespons op locatie, OSINT en opleiding tot SOC-analist, gebouwd op open source.">
+<meta property="og:title" content="SOC Suriname">
+<meta property="og:description" content="Lokaal SOC en Cyber Academy in Paramaribo, gebouwd op open source.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://suriname-soc.github.io/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="merk" href="./" aria-label="SOC Suriname, naar boven">
+      <img src="assets/logo.svg" alt="" width="34" height="38">
+      <span>SOC Suriname</span>
+    </a>
+    <nav aria-label="Hoofdmenu">
+      <ul>
+        <li><a href="#diensten">Diensten</a></li>
+        <li><a href="#academy">Academy</a></li>
+        <li><a href="#open-source">Open source</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a class="nav-cta" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="inhoud">
+  <section class="hero">
+    <div class="wrap">
+      <p class="status">In oprichting. Pilotplekken voor 2027.</p>
+      <h1>Wij houden de wacht over Surinaamse netwerken, vanuit Paramaribo.</h1>
+      <p class="intro">Een Security Operations Center dat aanvallen ziet en stopt, en een Cyber Academy die daarvoor Surinaams talent opleidt. Zelfde taal, zelfde tijdzone, en bij een incident staan we bij u op de stoep.</p>
+
+      <figure class="wacht" aria-labelledby="wacht-titel">
+        <figcaption id="wacht-titel">Zo bewaken we een etmaal, in Surinaamse tijd</figcaption>
+        <div class="band" role="img" aria-label="Dagdienst van 8 tot 17 uur, avonddienst van 17 tot 24 uur, 's nachts een analist van dienst op afroep.">
+          <span class="seg nacht" style="--van:0;--tot:8">'s nachts op afroep</span>
+          <span class="seg dag" style="--van:8;--tot:17">dagdienst</span>
+          <span class="seg avond" style="--van:17;--tot:24">avonddienst</span>
+          <span class="nu" id="nu" hidden><span class="nu-label" id="nu-label"></span></span>
+        </div>
+        <div class="uren" aria-hidden="true"><span>00</span><span>06</span><span>12</span><span>18</span><span>24</span></div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="diensten" class="blok">
+    <div class="wrap">
+      <h2>Wat we doen</h2>
+      <dl class="diensten">
+        <div>
+          <dt>Monitoring</dt>
+          <dd>We verzamelen en lezen de logs van uw netwerk, servers en werkplekken, en melden wat er niet klopt. Van kantooruren tot de klok rond, met een maandrapport in gewone taal.</dd>
+        </div>
+        <div>
+          <dt>Incidentrespons op locatie</dt>
+          <dd>Gaat het mis, dan zoeken we uit wat er gebeurd is, stoppen we de aanval en helpen we u weer op gang. Onze analisten zitten in Paramaribo en kunnen langskomen.</dd>
+        </div>
+        <div>
+          <dt>OSINT en dreigingsinformatie</dt>
+          <dd>We kijken naar uw organisatie zoals een aanvaller dat doet: welke systemen zichtbaar zijn op internet, welke wachtwoorden van medewerkers zijn gelekt en welke nepdomeinen uw naam misbruiken. U krijgt een overzicht met wat u eerst moet dichten.</dd>
+        </div>
+        <div>
+          <dt>Advies en compliance</dt>
+          <dd>Hulp bij beleid, kwetsbaarheidsonderzoek en de eisen van correspondentbanken of internationale opdrachtgevers in de olie- en gasketen, ook voor industriële systemen (OT).</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="academy" class="blok academy">
+    <div class="wrap">
+      <h2>Cyber Academy</h2>
+      <p class="lede">In twaalf weken van IT-er naar SOC-analist, in de avond en het weekend. Het traject eindigt met een stage in ons eigen SOC, met echte meldingen. Goede deelnemers kunnen bij ons in dienst komen.</p>
+      <ol class="traject">
+        <li><span class="wk">Week 1–3</span><strong>Netwerken en systemen</strong><span>Hoe verkeer loopt, Linux en Windows van binnen.</span></li>
+        <li><span class="wk">Week 4–6</span><strong>Logs en SIEM</strong><span>Logs lezen, doorzoeken en verbanden leggen in Wazuh en OpenSearch.</span></li>
+        <li><span class="wk">Week 7–9</span><strong>Detectie, OSINT en incidenten</strong><span>Aanvallen herkennen, open bronnen onderzoeken, een incident van melding tot afsluiting.</span></li>
+        <li><span class="wk">Week 10–12</span><strong>Stage in het SOC</strong><span>Meedraaien in de dienst, onder begeleiding van ervaren analisten.</span></li>
+      </ol>
+      <div class="werkgevers">
+        <h3>Voor werkgevers</h3>
+        <p>Laat eigen IT-personeel opleiden tot security-specialist, of boek een bewustwordingstraining voor alle medewerkers over phishing, wachtwoorden en social engineering. Maatwerk is mogelijk, ook voor OT in de energiesector. Voor talent zonder budget werken we aan een beurzenprogramma.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="open-source" class="blok">
+    <div class="wrap">
+      <h2>Gebouwd op open source</h2>
+      <p class="lede">We werken met beproefde open-source software. Uw geld gaat naar mensen in Suriname, niet naar licenties in het buitenland. U zit nooit vast aan één leverancier, en wat we doen is controleerbaar.</p>
+      <ul class="stack">
+        <li><strong>Wazuh</strong><span>detectie en monitoring van werkplekken en servers</span></li>
+        <li><strong>OpenSearch</strong><span>opslag en doorzoeken van logs</span></li>
+        <li><strong>Suricata en Zeek</strong><span>analyse van netwerkverkeer</span></li>
+        <li><strong>TheHive en Cortex</strong><span>afhandeling van incidenten</span></li>
+        <li><strong>MISP en OpenCTI</strong><span>dreigingsinformatie delen en ordenen</span></li>
+        <li><strong>SpiderFoot</strong><span>OSINT op uw externe aanvalsoppervlak</span></li>
+        <li><strong>Velociraptor</strong><span>forensisch onderzoek op afstand</span></li>
+      </ul>
+      <p class="noot">Ook deze website is open source. <a href="https://github.com/Suriname-SOC/Suriname-SOC.github.io">Bekijk de broncode op GitHub</a>.</p>
+    </div>
+  </section>
+
+  <section id="team" class="blok team">
+    <div class="wrap">
+      <h2>Wie het opzet</h2>
+      <div class="mensen">
+        <article>
+          <h3>Christiaan Verhoef</h3>
+          <p class="rol">Lead Cyber Academy en training</p>
+          <p>ICT-docent en innovation lead in het hoger onderwijs. Werkte als field service engineer in de energiesector en bracht eerder Nederlandse technologie naar het Caribisch gebied.</p>
+        </article>
+        <article>
+          <h3>Erwin Hendriks</h3>
+          <p class="rol">SOC-manager</p>
+          <p>Ervaren manager security operations. Stuurde een 24/7 SOC-team aan, met ploegendiensten, afspraken over reactietijden en incidentrespons.</p>
+        </article>
+        <article>
+          <h3>Lokale partner</h3>
+          <p class="rol">Faciliteit en netwerk in Suriname</p>
+          <p>Bouwt de beveiligde ruimte met noodstroom en dubbele verbinding, en verbindt ons met het Surinaamse bedrijfsleven.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Praat met ons over 2027</h2>
+      <p>We zoeken de eerste organisaties om mee te starten:</p>
+      <ul>
+        <li>organisaties in Suriname die hun beveiliging willen laten bewaken, als pilotklant;</li>
+        <li>werkgevers die medewerkers willen laten opleiden;</li>
+        <li>telecom- en IT-bedrijven die beveiligingsdiensten willen doorverkopen;</li>
+        <li>partners en investeerders voor de opstart.</li>
+      </ul>
+      <p class="mail">Ons e-mailadres volgt zodra de bedrijfsnaam vaststaat.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="voet">
+  <div class="wrap voet-in">
+    <p><img src="assets/logo.svg" alt="" width="22" height="25"> SOC Suriname is een werknaam. Het bedrijf is in oprichting.</p>
+    <p>Lettertypen Bricolage Grotesque en Public Sans onder de SIL Open Font License. <a href="https://github.com/Suriname-SOC/Suriname-SOC.github.io">Broncode</a></p>
+  </div>
+</footer>
+
+<script src="assets/wacht.js" defer></script>
+</body>
+</html>
