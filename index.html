@@ -5,158 +5,441 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SOC Suriname: SOC en Cyber Academy in Paramaribo</title>
 <meta name="description" content="Lokaal Security Operations Center en Cyber Academy in Paramaribo. Monitoring, incidentrespons op locatie, OSINT en opleiding tot SOC-analist, gebouwd op open source.">
-<meta property="og:title" content="SOC Suriname">
-<meta property="og:description" content="Lokaal SOC en Cyber Academy in Paramaribo, gebouwd op open source.">
+<meta property="og:title" content="SOC Suriname: SOC en Cyber Academy in Paramaribo">
+<meta property="og:description" content="Lokaal Security Operations Center en Cyber Academy in Paramaribo. Monitoring, incidentrespons op locatie, OSINT en opleiding tot SOC-analist, gebouwd op open source.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://suriname-soc.github.io/">
+<link rel="canonical" href="https://suriname-soc.github.io/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.classList.add("js");try{if(!sessionStorage.getItem("poort-open"))document.documentElement.classList.add("poort-dicht")}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#inhoud">Naar de inhoud</a>
 
+<div class="poort" id="poort" role="dialog" aria-modal="true" aria-labelledby="poort-titel" aria-describedby="poort-tekst">
+  <div class="luik-paneel links" aria-hidden="true"></div>
+  <div class="luik-paneel rechts" aria-hidden="true"></div>
+  <div class="poort-licht" aria-hidden="true"></div>
+  <div class="poort-kaart">
+    <div class="poort-zegel" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f1be2b" d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.5l7.1-.6z"/></svg></div>
+    <p class="poort-titel" id="poort-titel">Eerst even over uw privacy</p>
+    <div id="poort-tekst">
+      <p>Een beveiligingsbedrijf hoort zelf het goede voorbeeld te geven. Daarom:</p>
+      <ul>
+        <li>geen cookies en geen trackers;</li>
+        <li>geen advertenties of analysediensten;</li>
+        <li>niets geladen van andere servers.</li>
+      </ul>
+    </div>
+    <button type="button" class="knop" id="poort-open">Open de luiken</button>
+    <p class="klein"><a href="privacy.html">Lees de privacyverklaring</a></p>
+  </div>
+</div>
+
 <header class="top">
   <div class="wrap top-in">
-    <a class="merk" href="./" aria-label="SOC Suriname, naar boven">
+    <a class="merk" href="./">
       <img src="assets/logo.svg" alt="" width="34" height="38">
       <span>SOC Suriname</span>
     </a>
-    <nav aria-label="Hoofdmenu">
+    <button type="button" class="menu-knop" id="menu-knop" aria-expanded="false" aria-controls="hoofdmenu">Menu</button>
+    <nav id="hoofdmenu" aria-label="Hoofdmenu">
       <ul>
-        <li><a href="#diensten">Diensten</a></li>
-        <li><a href="#academy">Academy</a></li>
-        <li><a href="#open-source">Open source</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a class="nav-cta" href="#contact">Contact</a></li>
+        <li><a href="diensten.html">Diensten en pakketten</a></li>
+        <li><a href="academy.html">Academy</a></li>
+        <li><a href="over.html">Over ons</a></li>
+        <li><a href="presentatie.html">Presentatie</a></li>
+        <li><a class="nav-cta" href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main id="inhoud">
-  <section class="hero">
-    <div class="wrap">
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
       <p class="status">In oprichting. Pilotplekken voor 2027.</p>
-      <h1>Wij houden de wacht over Surinaamse netwerken, vanuit Paramaribo.</h1>
+      <h1 tabindex="-1">Wij houden de wacht over Surinaamse netwerken, vanuit Paramaribo.</h1>
       <p class="intro">Een Security Operations Center dat aanvallen ziet en stopt, en een Cyber Academy die daarvoor Surinaams talent opleidt. Zelfde taal, zelfde tijdzone, en bij een incident staan we bij u op de stoep.</p>
-
-      <figure class="wacht" aria-labelledby="wacht-titel">
-        <figcaption id="wacht-titel">Zo bewaken we een etmaal, in Surinaamse tijd</figcaption>
-        <div class="band" role="img" aria-label="Dagdienst van 8 tot 17 uur, avonddienst van 17 tot 24 uur, 's nachts een analist van dienst op afroep.">
-          <span class="seg nacht" style="--van:0;--tot:8">'s nachts op afroep</span>
-          <span class="seg dag" style="--van:8;--tot:17">dagdienst</span>
-          <span class="seg avond" style="--van:17;--tot:24">avonddienst</span>
-          <span class="nu" id="nu" hidden><span class="nu-label" id="nu-label"></span></span>
-        </div>
-        <div class="uren" aria-hidden="true"><span>00</span><span>06</span><span>12</span><span>18</span><span>24</span></div>
-      </figure>
-    </div>
-  </section>
-
-  <section id="diensten" class="blok">
-    <div class="wrap">
-      <h2>Wat we doen</h2>
-      <dl class="diensten">
-        <div>
-          <dt>Monitoring</dt>
-          <dd>We verzamelen en lezen de logs van uw netwerk, servers en werkplekken, en melden wat er niet klopt. Van kantooruren tot de klok rond, met een maandrapport in gewone taal.</dd>
-        </div>
-        <div>
-          <dt>Incidentrespons op locatie</dt>
-          <dd>Gaat het mis, dan zoeken we uit wat er gebeurd is, stoppen we de aanval en helpen we u weer op gang. Onze analisten zitten in Paramaribo en kunnen langskomen.</dd>
-        </div>
-        <div>
-          <dt>OSINT en dreigingsinformatie</dt>
-          <dd>We kijken naar uw organisatie zoals een aanvaller dat doet: welke systemen zichtbaar zijn op internet, welke wachtwoorden van medewerkers zijn gelekt en welke nepdomeinen uw naam misbruiken. U krijgt een overzicht met wat u eerst moet dichten.</dd>
-        </div>
-        <div>
-          <dt>Advies en compliance</dt>
-          <dd>Hulp bij beleid, kwetsbaarheidsonderzoek en de eisen van correspondentbanken of internationale opdrachtgevers in de olie- en gasketen, ook voor industriële systemen (OT).</dd>
-        </div>
-      </dl>
-    </div>
-  </section>
-
-  <section id="academy" class="blok academy">
-    <div class="wrap">
-      <h2>Cyber Academy</h2>
-      <p class="lede">In twaalf weken van IT-er naar SOC-analist, in de avond en het weekend. Het traject eindigt met een stage in ons eigen SOC, met echte meldingen. Goede deelnemers kunnen bij ons in dienst komen.</p>
-      <ol class="traject">
-        <li><span class="wk">Week 1–3</span><strong>Netwerken en systemen</strong><span>Hoe verkeer loopt, Linux en Windows van binnen.</span></li>
-        <li><span class="wk">Week 4–6</span><strong>Logs en SIEM</strong><span>Logs lezen, doorzoeken en verbanden leggen in Wazuh en OpenSearch.</span></li>
-        <li><span class="wk">Week 7–9</span><strong>Detectie, OSINT en incidenten</strong><span>Aanvallen herkennen, open bronnen onderzoeken, een incident van melding tot afsluiting.</span></li>
-        <li><span class="wk">Week 10–12</span><strong>Stage in het SOC</strong><span>Meedraaien in de dienst, onder begeleiding van ervaren analisten.</span></li>
-      </ol>
-      <div class="werkgevers">
-        <h3>Voor werkgevers</h3>
-        <p>Laat eigen IT-personeel opleiden tot security-specialist, of boek een bewustwordingstraining voor alle medewerkers over phishing, wachtwoorden en social engineering. Maatwerk is mogelijk, ook voor OT in de energiesector. Voor talent zonder budget werken we aan een beurzenprogramma.</p>
+      <div class="knoppen">
+        <a class="knop" href="diensten.html#pakketten">Bekijk de pakketten</a>
+        <a class="knop rand" href="academy.html#inschrijven">Schrijf je in voor de Academy</a>
       </div>
     </div>
-  </section>
-
-  <section id="open-source" class="blok">
-    <div class="wrap">
-      <h2>Gebouwd op open source</h2>
-      <p class="lede">We werken met beproefde open-source software. Uw geld gaat naar mensen in Suriname, niet naar licenties in het buitenland. U zit nooit vast aan één leverancier, en wat we doen is controleerbaar.</p>
-      <ul class="stack">
-        <li><strong>Wazuh</strong><span>detectie en monitoring van werkplekken en servers</span></li>
-        <li><strong>OpenSearch</strong><span>opslag en doorzoeken van logs</span></li>
-        <li><strong>Suricata en Zeek</strong><span>analyse van netwerkverkeer</span></li>
-        <li><strong>TheHive en Cortex</strong><span>afhandeling van incidenten</span></li>
-        <li><strong>MISP en OpenCTI</strong><span>dreigingsinformatie delen en ordenen</span></li>
-        <li><strong>SpiderFoot</strong><span>OSINT op uw externe aanvalsoppervlak</span></li>
-        <li><strong>Velociraptor</strong><span>forensisch onderzoek op afstand</span></li>
-      </ul>
-      <p class="noot">Ook deze website is open source. <a href="https://github.com/Suriname-SOC/Suriname-SOC.github.io">Bekijk de broncode op GitHub</a>.</p>
+    <div class="illus-kader">
+      <svg class="illus" viewBox="0 0 480 340" role="img" aria-labelledby="illus-analist-t">
+  <title id="illus-analist-t">Een analist met koptelefoon bewaakt 's avonds drie schermen: logregels, een radar en een melding die wordt afgehandeld.</title>
+  <rect width="480" height="340" rx="12" fill="#183b31"/>
+  <g>
+    <rect x="28" y="22" width="132" height="92" rx="4" fill="#0c221c"/>
+    <g class="sterren" fill="#f8faf8">
+      <circle cx="52" cy="44" r="1.6"/><circle cx="86" cy="36" r="1.2"/><circle cx="118" cy="54" r="1.8"/>
+      <circle cx="140" cy="38" r="1.2"/><circle cx="70" cy="70" r="1.2"/><circle cx="104" cy="84" r="1.5"/>
+    </g>
+    <path d="M118 96c10-6 20-6 30 0" stroke="#f1be2b" stroke-width="2" fill="none" opacity=".7"/>
+    <rect x="28" y="22" width="132" height="92" rx="4" fill="none" stroke="#2c5f4c" stroke-width="5"/>
+    <line x1="94" y1="22" x2="94" y2="114" stroke="#2c5f4c" stroke-width="4"/>
+    <g fill="#1f4a3a"><rect x="6" y="20" width="18" height="96" rx="2"/><rect x="164" y="20" width="18" height="96" rx="2"/></g>
+    <g stroke="#12302a" stroke-width="2"><path d="M8 32h14M8 44h14M8 56h14M8 68h14M8 80h14M8 92h14M8 104h14M166 32h14M166 44h14M166 56h14M166 68h14M166 80h14M166 92h14M166 104h14"/></g>
+  </g>
+  <ellipse class="scherm-gloed" cx="240" cy="258" rx="190" ry="16" fill="#2f6a51" opacity=".45"/>
+  <g>
+    <rect x="62" y="112" width="116" height="78" rx="6" fill="#0c221c" stroke="#2c5f4c" stroke-width="4"/>
+    <clipPath id="clip-log"><rect x="70" y="120" width="100" height="62"/></clipPath>
+    <g clip-path="url(#clip-log)">
+      <g class="scroll-log" fill="#6fae8f">
+        <rect x="72" y="124" width="70" height="4" rx="2"/><rect x="72" y="134" width="52" height="4" rx="2"/>
+        <rect x="72" y="144" width="84" height="4" rx="2" fill="#f1be2b"/><rect x="72" y="154" width="60" height="4" rx="2"/>
+        <rect x="72" y="164" width="76" height="4" rx="2"/><rect x="72" y="174" width="44" height="4" rx="2"/>
+        <rect x="72" y="184" width="70" height="4" rx="2"/><rect x="72" y="194" width="52" height="4" rx="2"/>
+        <rect x="72" y="204" width="84" height="4" rx="2" fill="#f1be2b"/><rect x="72" y="214" width="60" height="4" rx="2"/>
+        <rect x="72" y="224" width="76" height="4" rx="2"/><rect x="72" y="234" width="44" height="4" rx="2"/>
+      </g>
+    </g>
+    <rect x="112" y="190" width="16" height="20" fill="#2c5f4c"/><rect x="96" y="208" width="48" height="6" rx="3" fill="#2c5f4c"/>
+  </g>
+  <g>
+    <rect x="178" y="88" width="124" height="104" rx="6" fill="#0c221c" stroke="#2c5f4c" stroke-width="4"/>
+    <g fill="none" stroke="#2f6a51" stroke-width="1.5"><circle cx="240" cy="140" r="40"/><circle cx="240" cy="140" r="26"/><circle cx="240" cy="140" r="12"/><path d="M200 140h80M240 100v80"/></g>
+    <clipPath id="clip-radar"><circle cx="240" cy="140" r="40"/></clipPath>
+    <g clip-path="url(#clip-radar)"><path class="radar" d="M240 140 L240 98 A42 42 0 0 1 276 118 Z" fill="#6fae8f" opacity=".45"/></g>
+    <circle cx="258" cy="124" r="3.5" fill="#f1be2b"/>
+    <rect x="232" y="192" width="16" height="20" fill="#2c5f4c"/><rect x="214" y="208" width="52" height="6" rx="3" fill="#2c5f4c"/>
+  </g>
+  <g>
+    <rect x="302" y="112" width="116" height="78" rx="6" fill="#0c221c" stroke="#2c5f4c" stroke-width="4"/>
+    <g fill="#2f6a51"><rect x="312" y="122" width="96" height="10" rx="2"/><rect x="312" y="138" width="70" height="6" rx="2"/><rect x="312" y="150" width="82" height="6" rx="2"/></g>
+    <g class="alarm" opacity="0"><rect x="312" y="160" width="96" height="22" rx="4" fill="#b5362b"/><rect x="356" y="164" width="4" height="9" rx="2" fill="#f8faf8"/><circle cx="358" cy="177" r="2" fill="#f8faf8"/></g>
+    <g class="opgelost" opacity="0"><rect x="312" y="160" width="96" height="22" rx="4" fill="#2f6a51"/><path d="M351 171l5 5 10-10" stroke="#f8faf8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <rect x="352" y="190" width="16" height="20" fill="#2c5f4c"/><rect x="336" y="208" width="48" height="6" rx="3" fill="#2c5f4c"/>
+  </g>
+  <rect x="34" y="246" width="412" height="12" rx="3" fill="#2c5f4c"/>
+  <g fill="#1f4a3a"><rect x="52" y="258" width="10" height="82"/><rect x="418" y="258" width="10" height="82"/></g>
+  <path d="M168 246h40l4-8h-48z" fill="#12302a"/>
+  <g>
+    <rect x="188" y="252" width="100" height="88" rx="18" fill="#12302a"/>
+    <path d="M200 340c0-46 14-80 38-80s38 34 38 80z" fill="#1f4a3a"/>
+    <g class="hoofd-knik">
+      <circle cx="238" cy="232" r="22" fill="#6b4430"/>
+      <path d="M216 230c0-16 10-26 22-26s22 10 22 26c-4-8-12-12-22-12s-18 4-22 12z" fill="#1b1410"/>
+      <path d="M213 236c0-22 11-34 25-34s25 12 25 34" stroke="#0c221c" stroke-width="4" fill="none"/>
+      <rect x="208" y="230" width="9" height="16" rx="4" fill="#f1be2b"/><rect x="259" y="230" width="9" height="16" rx="4" fill="#f1be2b"/>
+    </g>
+  </g>
+</svg>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="team" class="blok team">
-    <div class="wrap">
-      <h2>Wie het opzet</h2>
-      <div class="mensen">
-        <article>
-          <h3>Christiaan Verhoef</h3>
-          <p class="rol">Lead Cyber Academy en training</p>
-          <p>ICT-docent en innovation lead in het hoger onderwijs. Werkte als field service engineer in de energiesector en bracht eerder Nederlandse technologie naar het Caribisch gebied.</p>
-        </article>
-        <article>
-          <h3>Erwin Hendriks</h3>
-          <p class="rol">SOC-manager</p>
-          <p>Ervaren manager security operations. Stuurde een 24/7 SOC-team aan, met ploegendiensten, afspraken over reactietijden en incidentrespons.</p>
-        </article>
-        <article>
-          <h3>Lokale partner</h3>
-          <p class="rol">Faciliteit en netwerk in Suriname</p>
-          <p>Bouwt de beveiligde ruimte met noodstroom en dubbele verbinding, en verbindt ons met het Surinaamse bedrijfsleven.</p>
-        </article>
+<section class="blok donker" aria-labelledby="wacht-kop">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <div>
+        <h2 id="wacht-kop">Dag en nacht iemand die meekijkt</h2>
+        <p class="lede">In een kleine markt zijn er 's nachts weinig meldingen. Daarom draaien we eerst dag- en avonddiensten op kantoor, met een analist op afroep voor de nacht.</p>
       </div>
     </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="wrap">
-      <h2>Praat met ons over 2027</h2>
-      <p>We zoeken de eerste organisaties om mee te starten:</p>
-      <ul>
-        <li>organisaties in Suriname die hun beveiliging willen laten bewaken, als pilotklant;</li>
-        <li>werkgevers die medewerkers willen laten opleiden;</li>
-        <li>telecom- en IT-bedrijven die beveiligingsdiensten willen doorverkopen;</li>
-        <li>partners en investeerders voor de opstart.</li>
-      </ul>
-      <p class="mail">Ons e-mailadres volgt zodra de bedrijfsnaam vaststaat.</p>
+    <figure class="wacht" aria-labelledby="wacht-titel">
+  <figcaption id="wacht-titel">Zo bewaken we een etmaal, in Surinaamse tijd</figcaption>
+  <div class="band" role="img" aria-label="Dagdienst van 8 tot 17 uur, avonddienst van 17 tot 24 uur, 's nachts een analist van dienst op afroep.">
+    <span class="seg nacht" style="--van:0;--tot:8">'s nachts op afroep</span>
+    <span class="seg dag" style="--van:8;--tot:17">dagdienst</span>
+    <span class="seg avond" style="--van:17;--tot:24">avonddienst</span>
+    <span class="nu" id="nu" hidden><span class="nu-label" id="nu-label"></span></span>
+  </div>
+  <div class="uren" aria-hidden="true"><span>00</span><span>06</span><span>12</span><span>18</span><span>24</span></div>
+</figure>
+    <div class="wacht-uitleg">
+      <div><h3>Dagdienst</h3><p>Bewaking, onderzoek van meldingen en overleg met uw IT-afdeling.</p></div>
+      <div><h3>Avonddienst</h3><p>Tot middernacht, wanneer veel aanvallen beginnen en uw eigen team naar huis is.</p></div>
+      <div><h3>Nacht op afroep</h3><p>Een kritieke melding wekt de dienstdoende analist, die direct ingrijpt.</p></div>
     </div>
-  </section>
+  </div>
+</section>
+
+<section class="blok" aria-labelledby="pijlers-kop">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <div>
+        <h2 id="pijlers-kop">Twee dingen tegelijk: bewaken en opleiden</h2>
+        <p class="lede">Het SOC heeft analisten nodig, en die zijn schaars. Dus leiden we ze zelf op. De Academy levert de mensen, het SOC de praktijk.</p>
+      </div>
+    </div>
+    <div class="pijlers">
+      <article class="pijler">
+        <div class="illus-kader"><svg class="illus" viewBox="0 0 480 340" role="img" aria-labelledby="illus-analist-t-2">
+  <title id="illus-analist-t-2">Een analist met koptelefoon bewaakt 's avonds drie schermen: logregels, een radar en een melding die wordt afgehandeld.</title>
+  <rect width="480" height="340" rx="12" fill="#183b31"/>
+  <g>
+    <rect x="28" y="22" width="132" height="92" rx="4" fill="#0c221c"/>
+    <g class="sterren" fill="#f8faf8">
+      <circle cx="52" cy="44" r="1.6"/><circle cx="86" cy="36" r="1.2"/><circle cx="118" cy="54" r="1.8"/>
+      <circle cx="140" cy="38" r="1.2"/><circle cx="70" cy="70" r="1.2"/><circle cx="104" cy="84" r="1.5"/>
+    </g>
+    <path d="M118 96c10-6 20-6 30 0" stroke="#f1be2b" stroke-width="2" fill="none" opacity=".7"/>
+    <rect x="28" y="22" width="132" height="92" rx="4" fill="none" stroke="#2c5f4c" stroke-width="5"/>
+    <line x1="94" y1="22" x2="94" y2="114" stroke="#2c5f4c" stroke-width="4"/>
+    <g fill="#1f4a3a"><rect x="6" y="20" width="18" height="96" rx="2"/><rect x="164" y="20" width="18" height="96" rx="2"/></g>
+    <g stroke="#12302a" stroke-width="2"><path d="M8 32h14M8 44h14M8 56h14M8 68h14M8 80h14M8 92h14M8 104h14M166 32h14M166 44h14M166 56h14M166 68h14M166 80h14M166 92h14M166 104h14"/></g>
+  </g>
+  <ellipse class="scherm-gloed" cx="240" cy="258" rx="190" ry="16" fill="#2f6a51" opacity=".45"/>
+  <g>
+    <rect x="62" y="112" width="116" height="78" rx="6" fill="#0c221c" stroke="#2c5f4c" stroke-width="4"/>
+    <clipPath id="clip-log-2"><rect x="70" y="120" width="100" height="62"/></clipPath>
+    <g clip-path="url(#clip-log-2)">
+      <g class="scroll-log" fill="#6fae8f">
+        <rect x="72" y="124" width="70" height="4" rx="2"/><rect x="72" y="134" width="52" height="4" rx="2"/>
+        <rect x="72" y="144" width="84" height="4" rx="2" fill="#f1be2b"/><rect x="72" y="154" width="60" height="4" rx="2"/>
+        <rect x="72" y="164" width="76" height="4" rx="2"/><rect x="72" y="174" width="44" height="4" rx="2"/>
+        <rect x="72" y="184" width="70" height="4" rx="2"/><rect x="72" y="194" width="52" height="4" rx="2"/>
+        <rect x="72" y="204" width="84" height="4" rx="2" fill="#f1be2b"/><rect x="72" y="214" width="60" height="4" rx="2"/>
+        <rect x="72" y="224" width="76" height="4" rx="2"/><rect x="72" y="234" width="44" height="4" rx="2"/>
+      </g>
+    </g>
+    <rect x="112" y="190" width="16" height="20" fill="#2c5f4c"/><rect x="96" y="208" width="48" height="6" rx="3" fill="#2c5f4c"/>
+  </g>
+  <g>
+    <rect x="178" y="88" width="124" height="104" rx="6" fill="#0c221c" stroke="#2c5f4c" stroke-width="4"/>
+    <g fill="none" stroke="#2f6a51" stroke-width="1.5"><circle cx="240" cy="140" r="40"/><circle cx="240" cy="140" r="26"/><circle cx="240" cy="140" r="12"/><path d="M200 140h80M240 100v80"/></g>
+    <clipPath id="clip-radar-2"><circle cx="240" cy="140" r="40"/></clipPath>
+    <g clip-path="url(#clip-radar-2)"><path class="radar" d="M240 140 L240 98 A42 42 0 0 1 276 118 Z" fill="#6fae8f" opacity=".45"/></g>
+    <circle cx="258" cy="124" r="3.5" fill="#f1be2b"/>
+    <rect x="232" y="192" width="16" height="20" fill="#2c5f4c"/><rect x="214" y="208" width="52" height="6" rx="3" fill="#2c5f4c"/>
+  </g>
+  <g>
+    <rect x="302" y="112" width="116" height="78" rx="6" fill="#0c221c" stroke="#2c5f4c" stroke-width="4"/>
+    <g fill="#2f6a51"><rect x="312" y="122" width="96" height="10" rx="2"/><rect x="312" y="138" width="70" height="6" rx="2"/><rect x="312" y="150" width="82" height="6" rx="2"/></g>
+    <g class="alarm" opacity="0"><rect x="312" y="160" width="96" height="22" rx="4" fill="#b5362b"/><rect x="356" y="164" width="4" height="9" rx="2" fill="#f8faf8"/><circle cx="358" cy="177" r="2" fill="#f8faf8"/></g>
+    <g class="opgelost" opacity="0"><rect x="312" y="160" width="96" height="22" rx="4" fill="#2f6a51"/><path d="M351 171l5 5 10-10" stroke="#f8faf8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <rect x="352" y="190" width="16" height="20" fill="#2c5f4c"/><rect x="336" y="208" width="48" height="6" rx="3" fill="#2c5f4c"/>
+  </g>
+  <rect x="34" y="246" width="412" height="12" rx="3" fill="#2c5f4c"/>
+  <g fill="#1f4a3a"><rect x="52" y="258" width="10" height="82"/><rect x="418" y="258" width="10" height="82"/></g>
+  <path d="M168 246h40l4-8h-48z" fill="#12302a"/>
+  <g>
+    <rect x="188" y="252" width="100" height="88" rx="18" fill="#12302a"/>
+    <path d="M200 340c0-46 14-80 38-80s38 34 38 80z" fill="#1f4a3a"/>
+    <g class="hoofd-knik">
+      <circle cx="238" cy="232" r="22" fill="#6b4430"/>
+      <path d="M216 230c0-16 10-26 22-26s22 10 22 26c-4-8-12-12-22-12s-18 4-22 12z" fill="#1b1410"/>
+      <path d="M213 236c0-22 11-34 25-34s25 12 25 34" stroke="#0c221c" stroke-width="4" fill="none"/>
+      <rect x="208" y="230" width="9" height="16" rx="4" fill="#f1be2b"/><rect x="259" y="230" width="9" height="16" rx="4" fill="#f1be2b"/>
+    </g>
+  </g>
+</svg></div>
+        <h3>Het SOC</h3>
+        <p>Wij lezen mee met uw netwerk, servers en werkplekken. Bij een aanval grijpen we in, en we vertellen u in gewone taal wat er gebeurde.</p>
+        <ul>
+          <li>Monitoring op werkdagen, tot middernacht of de klok rond</li>
+          <li>Incidentrespons, ook op locatie</li>
+          <li>OSINT-scan van uw aanvalsoppervlak</li>
+        </ul>
+        <div class="knoppen">
+          <a class="knop" href="diensten.html#pakketten">Bekijk het aanbod</a>
+        </div>
+      </article>
+      <article class="pijler">
+        <div class="illus-kader"><svg class="illus" viewBox="0 0 480 340" role="img" aria-labelledby="illus-docent-t">
+  <title id="illus-docent-t">Een docent wijst op een netwerkschema op het whiteboard. Drie cursisten met laptops kijken mee, één steekt een hand op.</title>
+  <rect width="480" height="340" rx="12" fill="#183b31"/>
+  <rect x="150" y="34" width="300" height="176" rx="6" fill="#f8faf8" stroke="#2c5f4c" stroke-width="6"/>
+  <rect x="150" y="210" width="300" height="8" rx="2" fill="#2c5f4c"/>
+  <g fill="none" stroke="#cfdcd5" stroke-width="3">
+    <path d="M206 92L292 72M292 72L384 112M384 112L332 168M332 168L206 92"/>
+  </g>
+  <g fill="none" stroke="#f1be2b" stroke-width="4" stroke-dasharray="120" stroke-dashoffset="120" stroke-linecap="round">
+    <path class="lijn-licht" d="M206 92L292 72L384 112"/>
+  </g>
+  <g>
+    <circle class="knoop" cx="206" cy="92" r="14" fill="#2c5f4c"/>
+    <circle class="knoop" cx="292" cy="72" r="14" fill="#2c5f4c"/>
+    <circle class="knoop" cx="384" cy="112" r="14" fill="#2c5f4c"/>
+    <circle class="knoop" cx="332" cy="168" r="14" fill="#2c5f4c"/>
+  </g>
+  <g fill="#f8faf8"><rect x="200" y="87" width="12" height="10" rx="1"/><rect x="286" y="67" width="12" height="10" rx="1"/><rect x="378" y="107" width="12" height="10" rx="1"/></g>
+  <path d="M326 168l6-7 6 7-6 7z" fill="#f8faf8"/>
+  <g fill="#1f4a3a"><rect x="172" y="52" width="40" height="6" rx="3"/><rect x="172" y="186" width="60" height="6" rx="3"/><rect x="380" y="186" width="50" height="6" rx="3"/></g>
+  <g>
+    <rect x="84" y="250" width="14" height="80" rx="5" fill="#12302a"/><rect x="104" y="250" width="14" height="80" rx="5" fill="#12302a"/>
+    <path d="M76 260c0-56 8-92 25-92s25 36 25 92z" fill="#f1be2b"/>
+    <path d="M86 260l-6-36" stroke="#a8714c" stroke-width="10" stroke-linecap="round"/>
+    <g class="wijs-arm">
+      <path d="M116 180l58-46" stroke="#f1be2b" stroke-width="13" stroke-linecap="round"/>
+      <path d="M170 137l20-15" stroke="#a8714c" stroke-width="7" stroke-linecap="round"/>
+    </g>
+    <circle cx="101" cy="146" r="20" fill="#a8714c"/>
+    <path d="M80 144c0-16 10-24 21-24s21 8 21 22c-6-8-12-10-21-10s-15 4-21 12z" fill="#1b1410"/>
+    <circle cx="111" cy="146" r="1.8" fill="#1b1410"/>
+  </g>
+  <g>
+    <rect x="178" y="292" width="76" height="8" rx="2" fill="#2c5f4c"/>
+    <path d="M186 292l8-24h44l8 24z" fill="#0c221c"/><path class="scherm-gloed" d="M190 290l7-19h38l7 19z" fill="#2f6a51"/>
+    <path d="M180 340c0-30 14-46 36-46s36 16 36 46z" fill="#1f4a3a"/>
+    <circle cx="216" cy="276" r="17" fill="#8a5a3c"/><path d="M199 274c0-12 8-20 17-20s17 8 17 20c-4-5-10-8-17-8s-13 3-17 8z" fill="#1b1410"/>
+  </g>
+  <g>
+    <rect x="268" y="292" width="76" height="8" rx="2" fill="#2c5f4c"/>
+    <path d="M276 292l8-24h44l8 24z" fill="#0c221c"/><path class="scherm-gloed" d="M280 290l7-19h38l7 19z" fill="#2f6a51"/>
+    <path d="M270 340c0-30 14-46 36-46s36 16 36 46z" fill="#2c5f4c"/>
+    <circle cx="306" cy="276" r="17" fill="#6b4430"/><path d="M289 280c0-18 8-26 17-26s17 8 17 26l-4-10c-3-4-8-6-13-6s-10 2-13 6z" fill="#1b1410"/>
+  </g>
+  <g>
+    <g class="hand-op"><path d="M388 262v34" stroke="#1f4a3a" stroke-width="12" stroke-linecap="round"/><circle cx="388" cy="300" r="6" fill="#a8714c"/></g>
+    <path d="M360 340c0-30 14-46 36-46s36 16 36 46z" fill="#1f4a3a"/>
+    <circle cx="396" cy="276" r="17" fill="#a8714c"/><path d="M379 272c0-12 8-18 17-18s17 6 17 18c-5-4-10-6-17-6s-12 2-17 6z" fill="#1b1410"/>
+  </g>
+</svg></div>
+        <h3>De Cyber Academy</h3>
+        <p>In twaalf weken van IT-er naar SOC-analist, met een stage in ons eigen SOC. Werkgevers sturen eigen personeel, en goede deelnemers kunnen bij ons in dienst.</p>
+        <ul>
+          <li>Avond- en weekendopleiding met echte meldingen</li>
+          <li>Bewustwordingstraining voor alle medewerkers</li>
+          <li>Maatwerk voor IT-teams en OT in de energiesector</li>
+        </ul>
+        <div class="knoppen">
+          <a class="knop" href="academy.html#inschrijven">Schrijf je in</a>
+          <a class="knop rand" href="academy.html#werkgevers">Voor werkgevers</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="blok mist" aria-labelledby="pakket-kop">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <div>
+        <h2 id="pakket-kop">Kies hoe lang we meekijken</h2>
+        <p class="lede">Drie pakketten, dezelfde analisten en dezelfde open-source techniek. U kunt opschalen wanneer u wilt.</p>
+      </div>
+      <a class="knop rand" href="diensten.html#vergelijk">Vergelijk de pakketten</a>
+    </div>
+    <div class="pakketten">
+  <article class="pakket">
+    <span class="label">Startpakket voor pilotklanten</span>
+    <h3>Wacht Basis</h3>
+    <p class="voor">Voor organisaties die beginnen met professionele bewaking.</p>
+    <p class="dekking">Werkdagen, 08:00 tot 17:00</p>
+    <ul>
+      <li>Wazuh op servers en werkplekken</li>
+      <li>Meldingen onderzocht door een analist</li>
+      <li>Kritieke meldingen direct telefonisch doorgegeven</li>
+      <li>Maandrapport in gewone taal</li>
+    </ul>
+    <a class="knop rand" href="contact.html">Vraag een offerte</a>
+  </article>
+  <article class="pakket uitgelicht">
+    <span class="label">Voor banken en dienstverleners</span>
+    <h3>Wacht Plus</h3>
+    <p class="voor">Voor organisaties die ook 's avonds en 's nachts bereikbaar willen zijn.</p>
+    <p class="dekking">Dag en avond tot 24:00, nacht op afroep</p>
+    <ul>
+      <li>Alles uit Wacht Basis</li>
+      <li>Netwerkanalyse met Suricata en Zeek</li>
+      <li>Ingrijpen op afstand, ook 's nachts</li>
+      <li>Kwartaaloverleg en OSINT-scan per jaar</li>
+    </ul>
+    <a class="knop" href="contact.html">Vraag een offerte</a>
+  </article>
+  <article class="pakket">
+    <span class="label later">Volgt later</span>
+    <h3>Wacht Continu</h3>
+    <p class="voor">Voor vitale processen die geen minuut onbewaakt mogen zijn.</p>
+    <p class="dekking">24 uur per dag, 7 dagen per week</p>
+    <ul>
+      <li>Alles uit Wacht Plus</li>
+      <li>Volledige nachtploeg op kantoor</li>
+      <li>Snelste reactietijden, vastgelegd in de SLA</li>
+      <li>Ook voor industriële systemen (OT)</li>
+    </ul>
+    <a class="knop rand" href="contact.html">Zet mij op de lijst</a>
+  </article>
+</div>
+  </div>
+</section>
+
+<section class="blok" aria-labelledby="werkwijze-kop">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <div>
+        <h2 id="werkwijze-kop">Zo sluit u aan</h2>
+        <p class="lede">Van eerste gesprek tot bewaking in vier stappen.</p>
+      </div>
+    </div>
+    <ol class="stappen">
+      <li><h3>Kennismaking</h3><p>We bespreken uw organisatie, systemen en wat u wilt beschermen.</p></li>
+      <li><h3>Nulmeting</h3><p>Een OSINT-scan en een rondgang langs uw netwerk laten zien waar de risico's zitten.</p></li>
+      <li><h3>Aansluiten</h3><p>We plaatsen sensoren en agents, stemmen meldingen af en leggen afspraken vast in een SLA.</p></li>
+      <li><h3>Bewaken en rapporteren</h3><p>Wij kijken mee, grijpen in bij incidenten en bespreken elke maand de stand van zaken.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="blok mist" aria-labelledby="os-kop">
+  <div class="wrap">
+    <h2 id="os-kop">Gebouwd op open source</h2>
+    <p class="lede">Beproefde open-source software in plaats van dure licenties. Uw geld gaat naar mensen in Suriname, u zit nooit vast aan één leverancier, en wat we doen is controleerbaar.</p>
+    <ul class="stack">
+      <li><strong>Wazuh</strong><span>detectie en monitoring van werkplekken en servers</span></li>
+      <li><strong>OpenSearch</strong><span>opslag en doorzoeken van logs</span></li>
+      <li><strong>Suricata en Zeek</strong><span>analyse van netwerkverkeer</span></li>
+      <li><strong>TheHive en Cortex</strong><span>afhandeling van incidenten</span></li>
+      <li><strong>MISP en OpenCTI</strong><span>dreigingsinformatie delen en ordenen</span></li>
+      <li><strong>SpiderFoot</strong><span>OSINT op uw externe aanvalsoppervlak</span></li>
+      <li><strong>Velociraptor</strong><span>forensisch onderzoek op afstand</span></li>
+    </ul>
+    <p class="noot">Ook deze website is open source. <a href="https://github.com/Suriname-SOC/Suriname-SOC.github.io">Bekijk de broncode op GitHub</a>.</p>
+  </div>
+</section>
+
+<section class="cta-band" aria-labelledby="cta-kop">
+  <div class="wrap">
+    <h2 id="cta-kop">Praat met ons over 2027</h2>
+    <p>We zoeken de eerste organisaties om mee te starten, werkgevers die medewerkers willen laten opleiden, en partners voor de opstart.</p>
+    <div class="knoppen">
+      <a class="knop" href="contact.html">Word pilotklant</a>
+      <a class="knop rand" href="presentatie.html">Bekijk de presentatie</a>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer class="voet">
-  <div class="wrap voet-in">
-    <p><img src="assets/logo.svg" alt="" width="22" height="25"> SOC Suriname is een werknaam. Het bedrijf is in oprichting.</p>
-    <p>Lettertypen Bricolage Grotesque en Public Sans onder de SIL Open Font License. <a href="https://github.com/Suriname-SOC/Suriname-SOC.github.io">Broncode</a></p>
+  <div class="wrap">
+    <div class="voet-raster">
+      <div>
+        <a class="merk" href="./"><img src="assets/logo.svg" alt="" width="26" height="29"><span>SOC Suriname</span></a>
+        <p>Security Operations Center en Cyber Academy in Paramaribo. Werknaam, het bedrijf is in oprichting.</p>
+      </div>
+      <div>
+        <h2>Aanbod</h2>
+        <ul>
+          <li><a href="diensten.html#pakketten">SOC-pakketten</a></li>
+          <li><a href="diensten.html#losse-diensten">Losse diensten</a></li>
+          <li><a href="academy.html">Cyber Academy</a></li>
+          <li><a href="academy.html#werkgevers">Voor werkgevers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Organisatie</h2>
+        <ul>
+          <li><a href="over.html">Over ons</a></li>
+          <li><a href="presentatie.html">Presentatie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="klein">
+      <p>Geen cookies, geen trackers. Lettertypen Bricolage Grotesque en Public Sans onder de SIL Open Font License.</p>
+      <p><a href="https://github.com/Suriname-SOC/Suriname-SOC.github.io">Broncode op GitHub</a></p>
+    </div>
   </div>
 </footer>
 
-<script src="assets/wacht.js" defer></script>
+<script src="assets/site.js" defer></script>
 </body>
 </html>

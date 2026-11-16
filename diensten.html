@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diensten en pakketten: SOC Suriname</title>
+<meta name="description" content="SOC-pakketten voor Surinaamse organisaties: bewaking op werkdagen, tot middernacht of de klok rond, plus OSINT-scan, incidentrespons en advies.">
+<meta property="og:title" content="Diensten en pakketten: SOC Suriname">
+<meta property="og:description" content="SOC-pakketten voor Surinaamse organisaties: bewaking op werkdagen, tot middernacht of de klok rond, plus OSINT-scan, incidentrespons en advies.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://suriname-soc.github.io/diensten.html">
+<link rel="canonical" href="https://suriname-soc.github.io/diensten.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.classList.add("js");try{if(!sessionStorage.getItem("poort-open"))document.documentElement.classList.add("poort-dicht")}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#inhoud">Naar de inhoud</a>
+
+<div class="poort" id="poort" role="dialog" aria-modal="true" aria-labelledby="poort-titel" aria-describedby="poort-tekst">
+  <div class="luik-paneel links" aria-hidden="true"></div>
+  <div class="luik-paneel rechts" aria-hidden="true"></div>
+  <div class="poort-licht" aria-hidden="true"></div>
+  <div class="poort-kaart">
+    <div class="poort-zegel" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f1be2b" d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L2 9.5l7.1-.6z"/></svg></div>
+    <p class="poort-titel" id="poort-titel">Eerst even over uw privacy</p>
+    <div id="poort-tekst">
+      <p>Een beveiligingsbedrijf hoort zelf het goede voorbeeld te geven. Daarom:</p>
+      <ul>
+        <li>geen cookies en geen trackers;</li>
+        <li>geen advertenties of analysediensten;</li>
+        <li>niets geladen van andere servers.</li>
+      </ul>
+    </div>
+    <button type="button" class="knop" id="poort-open">Open de luiken</button>
+    <p class="klein"><a href="privacy.html">Lees de privacyverklaring</a></p>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="merk" href="./">
+      <img src="assets/logo.svg" alt="" width="34" height="38">
+      <span>SOC Suriname</span>
+    </a>
+    <button type="button" class="menu-knop" id="menu-knop" aria-expanded="false" aria-controls="hoofdmenu">Menu</button>
+    <nav id="hoofdmenu" aria-label="Hoofdmenu">
+      <ul>
+        <li><a href="diensten.html" aria-current="page">Diensten en pakketten</a></li>
+        <li><a href="academy.html">Academy</a></li>
+        <li><a href="over.html">Over ons</a></li>
+        <li><a href="presentatie.html">Presentatie</a></li>
+        <li><a class="nav-cta" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="inhoud">
+<section class="pagina-kop">
+  <div class="wrap">
+    <p class="status">Pilotklanten starten in 2027</p>
+    <h1 tabindex="-1">Diensten en pakketten</h1>
+    <p class="intro">Een vast pakket voor doorlopende bewaking, aangevuld met losse diensten wanneer u ze nodig hebt. Prijzen stemmen we af op de grootte van uw omgeving.</p>
+    <div class="knoppen">
+      <a class="knop" href="contact.html">Vraag een offerte</a>
+      <a class="knop rand" href="#losse-diensten">Losse diensten</a>
+    </div>
+  </div>
+</section>
+
+<section class="blok mist" id="pakketten" aria-labelledby="pakketten-kop">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <div>
+        <h2 id="pakketten-kop">SOC-pakketten</h2>
+        <p class="lede">Alle pakketten draaien op dezelfde open-source stack en dezelfde analisten in Paramaribo. Het verschil zit in de uren waarop we meekijken.</p>
+      </div>
+    </div>
+    <div class="pakketten">
+  <article class="pakket">
+    <span class="label">Startpakket voor pilotklanten</span>
+    <h3>Wacht Basis</h3>
+    <p class="voor">Voor organisaties die beginnen met professionele bewaking.</p>
+    <p class="dekking">Werkdagen, 08:00 tot 17:00</p>
+    <ul>
+      <li>Wazuh op servers en werkplekken</li>
+      <li>Meldingen onderzocht door een analist</li>
+      <li>Kritieke meldingen direct telefonisch doorgegeven</li>
+      <li>Maandrapport in gewone taal</li>
+    </ul>
+    <a class="knop rand" href="contact.html">Vraag een offerte</a>
+  </article>
+  <article class="pakket uitgelicht">
+    <span class="label">Voor banken en dienstverleners</span>
+    <h3>Wacht Plus</h3>
+    <p class="voor">Voor organisaties die ook 's avonds en 's nachts bereikbaar willen zijn.</p>
+    <p class="dekking">Dag en avond tot 24:00, nacht op afroep</p>
+    <ul>
+      <li>Alles uit Wacht Basis</li>
+      <li>Netwerkanalyse met Suricata en Zeek</li>
+      <li>Ingrijpen op afstand, ook 's nachts</li>
+      <li>Kwartaaloverleg en OSINT-scan per jaar</li>
+    </ul>
+    <a class="knop" href="contact.html">Vraag een offerte</a>
+  </article>
+  <article class="pakket">
+    <span class="label later">Volgt later</span>
+    <h3>Wacht Continu</h3>
+    <p class="voor">Voor vitale processen die geen minuut onbewaakt mogen zijn.</p>
+    <p class="dekking">24 uur per dag, 7 dagen per week</p>
+    <ul>
+      <li>Alles uit Wacht Plus</li>
+      <li>Volledige nachtploeg op kantoor</li>
+      <li>Snelste reactietijden, vastgelegd in de SLA</li>
+      <li>Ook voor industriële systemen (OT)</li>
+    </ul>
+    <a class="knop rand" href="contact.html">Zet mij op de lijst</a>
+  </article>
+</div>
+
+    <section class="tabel-rol" id="vergelijk" tabindex="0" aria-labelledby="vergelijk-titel">
+      <table>
+        <caption id="vergelijk-titel">De pakketten naast elkaar</caption>
+        <thead>
+          <tr><th scope="col">Onderdeel</th><th scope="col">Wacht Basis</th><th scope="col">Wacht Plus</th><th scope="col">Wacht Continu</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Bewaakte uren</th><td>Werkdagen 08–17</td><td>Dagelijks 08–24, nacht op afroep</td><td>24/7 op kantoor</td></tr>
+          <tr><th scope="row">Werkplekken en servers (Wazuh)</th><td>Ja</td><td>Ja</td><td>Ja</td></tr>
+          <tr><th scope="row">Netwerkverkeer (Suricata, Zeek)</th><td>Optioneel</td><td>Ja</td><td>Ja</td></tr>
+          <tr><th scope="row">Ingrijpen op afstand</th><td>Binnen dienst</td><td>Ja, ook 's nachts</td><td>Ja</td></tr>
+          <tr><th scope="row">Incidentrespons op locatie</th><td>Op uurbasis</td><td>Uren inbegrepen</td><td>Uren inbegrepen</td></tr>
+          <tr><th scope="row">OSINT-scan aanvalsoppervlak</th><td>Los te bestellen</td><td>Eén per jaar</td><td>Twee per jaar</td></tr>
+          <tr><th scope="row">Rapportage en overleg</th><td>Maandrapport</td><td>Maandrapport en kwartaaloverleg</td><td>Maandrapport en maandoverleg</td></tr>
+          <tr><th scope="row">Industriële systemen (OT)</th><td>Nee</td><td>Op aanvraag</td><td>Ja</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <p class="noot">Reactietijden leggen we per klant vast in de SLA. 's Nachts geldt bij Wacht Plus een langere reactietijd dan overdag, omdat de analist eerst wordt opgeroepen.</p>
+  </div>
+</section>
+
+<section class="blok" id="losse-diensten" aria-labelledby="los-kop">
+  <div class="wrap">
+    <h2 id="los-kop">Losse diensten</h2>
+    <p class="lede">Ook zonder abonnement te bestellen. Voor klanten met een pakket gelden lagere tarieven.</p>
+    <dl class="diensten">
+      <div>
+        <dt>OSINT-scan</dt>
+        <dd><p>We bekijken uw organisatie zoals een aanvaller dat doet: welke systemen zichtbaar zijn op internet, welke wachtwoorden van medewerkers in datalekken staan, en welke nepdomeinen uw naam misbruiken. U krijgt een rapport met wat u eerst moet dichten.</p></dd>
+      </div>
+      <div>
+        <dt>Incidentrespons</dt>
+        <dd><p>Bij een hack, ransomware of datalek zoeken we uit wat er gebeurd is, stoppen we de aanval, verzamelen we bewijs en helpen we u weer op gang. Onze analisten zitten in Paramaribo en komen langs.</p></dd>
+      </div>
+      <div>
+        <dt>Kwetsbaarheidsonderzoek</dt>
+        <dd><p>Een periodieke scan van uw netwerk en webapplicaties, met een lijst van zwakke plekken op volgorde van urgentie en hulp bij het verhelpen.</p></dd>
+      </div>
+      <div>
+        <dt>Advies en compliance</dt>
+        <dd><p>Hulp bij beveiligingsbeleid, incidentplannen en de eisen van correspondentbanken, verzekeraars en internationale opdrachtgevers in de olie- en gasketen.</p></dd>
+      </div>
+      <div>
+        <dt>OT-beveiliging</dt>
+        <dd><p>Inventarisatie en bewaking van industriële systemen in energie en productie, zonder de processen te verstoren.</p></dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section class="blok donker" aria-labelledby="sector-kop">
+  <div class="wrap">
+    <h2 id="sector-kop">Voor wie we werken</h2>
+    <div class="kaarten">
+      <div class="kaart"><h3>Banken en verzekeraars</h3><p>Bewaking die aansluit op de eisen van toezichthouders en correspondentbanken.</p></div>
+      <div class="kaart"><h3>Energie en mijnbouw</h3><p>Kantoor-IT en industriële systemen, voor bedrijven en toeleveranciers in de olie- en gasketen.</p></div>
+      <div class="kaart"><h3>Overheid en semi-overheid</h3><p>Monitoring en incidentrespons voor ministeries, staatsbedrijven en uitvoeringsorganisaties.</p></div>
+      <div class="kaart"><h3>Telecom en IT</h3><p>Beveiligingsdiensten om door te verkopen aan uw eigen zakelijke klanten.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" aria-labelledby="cta-kop">
+  <div class="wrap">
+    <h2 id="cta-kop">Praat met ons over 2027</h2>
+    <p>We zoeken de eerste organisaties om mee te starten, werkgevers die medewerkers willen laten opleiden, en partners voor de opstart.</p>
+    <div class="knoppen">
+      <a class="knop" href="contact.html">Word pilotklant</a>
+      <a class="knop rand" href="presentatie.html">Bekijk de presentatie</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="voet">
+  <div class="wrap">
+    <div class="voet-raster">
+      <div>
+        <a class="merk" href="./"><img src="assets/logo.svg" alt="" width="26" height="29"><span>SOC Suriname</span></a>
+        <p>Security Operations Center en Cyber Academy in Paramaribo. Werknaam, het bedrijf is in oprichting.</p>
+      </div>
+      <div>
+        <h2>Aanbod</h2>
+        <ul>
+          <li><a href="diensten.html#pakketten">SOC-pakketten</a></li>
+          <li><a href="diensten.html#losse-diensten">Losse diensten</a></li>
+          <li><a href="academy.html">Cyber Academy</a></li>
+          <li><a href="academy.html#werkgevers">Voor werkgevers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Organisatie</h2>
+        <ul>
+          <li><a href="over.html">Over ons</a></li>
+          <li><a href="presentatie.html">Presentatie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="klein">
+      <p>Geen cookies, geen trackers. Lettertypen Bricolage Grotesque en Public Sans onder de SIL Open Font License.</p>
+      <p><a href="https://github.com/Suriname-SOC/Suriname-SOC.github.io">Broncode op GitHub</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>

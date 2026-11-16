@@ -1,0 +1,122 @@
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <p class="status">In oprichting. Pilotplekken voor 2027.</p>
+      <h1 tabindex="-1">Wij houden de wacht over Surinaamse netwerken, vanuit Paramaribo.</h1>
+      <p class="intro">Een Security Operations Center dat aanvallen ziet en stopt, en een Cyber Academy die daarvoor Surinaams talent opleidt. Zelfde taal, zelfde tijdzone, en bij een incident staan we bij u op de stoep.</p>
+      <div class="knoppen">
+        <a class="knop" href="diensten.html#pakketten">Bekijk de pakketten</a>
+        <a class="knop rand" href="academy.html#inschrijven">Schrijf je in voor de Academy</a>
+      </div>
+    </div>
+    <div class="illus-kader">
+      {{analist}}
+    </div>
+  </div>
+</section>
+
+<section class="blok donker" aria-labelledby="wacht-kop">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <div>
+        <h2 id="wacht-kop">Dag en nacht iemand die meekijkt</h2>
+        <p class="lede">In een kleine markt zijn er 's nachts weinig meldingen. Daarom draaien we eerst dag- en avonddiensten op kantoor, met een analist op afroep voor de nacht.</p>
+      </div>
+    </div>
+    {{wacht}}
+    <div class="wacht-uitleg">
+      <div><h3>Dagdienst</h3><p>Bewaking, onderzoek van meldingen en overleg met uw IT-afdeling.</p></div>
+      <div><h3>Avonddienst</h3><p>Tot middernacht, wanneer veel aanvallen beginnen en uw eigen team naar huis is.</p></div>
+      <div><h3>Nacht op afroep</h3><p>Een kritieke melding wekt de dienstdoende analist, die direct ingrijpt.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="blok" aria-labelledby="pijlers-kop">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <div>
+        <h2 id="pijlers-kop">Twee dingen tegelijk: bewaken en opleiden</h2>
+        <p class="lede">Het SOC heeft analisten nodig, en die zijn schaars. Dus leiden we ze zelf op. De Academy levert de mensen, het SOC de praktijk.</p>
+      </div>
+    </div>
+    <div class="pijlers">
+      <article class="pijler">
+        <div class="illus-kader">{{analist-klein}}</div>
+        <h3>Het SOC</h3>
+        <p>Wij lezen mee met uw netwerk, servers en werkplekken. Bij een aanval grijpen we in, en we vertellen u in gewone taal wat er gebeurde.</p>
+        <ul>
+          <li>Monitoring op werkdagen, tot middernacht of de klok rond</li>
+          <li>Incidentrespons, ook op locatie</li>
+          <li>OSINT-scan van uw aanvalsoppervlak</li>
+        </ul>
+        <div class="knoppen">
+          <a class="knop" href="diensten.html#pakketten">Bekijk het aanbod</a>
+        </div>
+      </article>
+      <article class="pijler">
+        <div class="illus-kader">{{docent}}</div>
+        <h3>De Cyber Academy</h3>
+        <p>In twaalf weken van IT-er naar SOC-analist, met een stage in ons eigen SOC. Werkgevers sturen eigen personeel, en goede deelnemers kunnen bij ons in dienst.</p>
+        <ul>
+          <li>Avond- en weekendopleiding met echte meldingen</li>
+          <li>Bewustwordingstraining voor alle medewerkers</li>
+          <li>Maatwerk voor IT-teams en OT in de energiesector</li>
+        </ul>
+        <div class="knoppen">
+          <a class="knop" href="academy.html#inschrijven">Schrijf je in</a>
+          <a class="knop rand" href="academy.html#werkgevers">Voor werkgevers</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="blok mist" aria-labelledby="pakket-kop">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <div>
+        <h2 id="pakket-kop">Kies hoe lang we meekijken</h2>
+        <p class="lede">Drie pakketten, dezelfde analisten en dezelfde open-source techniek. U kunt opschalen wanneer u wilt.</p>
+      </div>
+      <a class="knop rand" href="diensten.html#vergelijk">Vergelijk de pakketten</a>
+    </div>
+    {{pakketten}}
+  </div>
+</section>
+
+<section class="blok" aria-labelledby="werkwijze-kop">
+  <div class="wrap">
+    <div class="sectie-kop">
+      <div>
+        <h2 id="werkwijze-kop">Zo sluit u aan</h2>
+        <p class="lede">Van eerste gesprek tot bewaking in vier stappen.</p>
+      </div>
+    </div>
+    <ol class="stappen">
+      <li><h3>Kennismaking</h3><p>We bespreken uw organisatie, systemen en wat u wilt beschermen.</p></li>
+      <li><h3>Nulmeting</h3><p>Een OSINT-scan en een rondgang langs uw netwerk laten zien waar de risico's zitten.</p></li>
+      <li><h3>Aansluiten</h3><p>We plaatsen sensoren en agents, stemmen meldingen af en leggen afspraken vast in een SLA.</p></li>
+      <li><h3>Bewaken en rapporteren</h3><p>Wij kijken mee, grijpen in bij incidenten en bespreken elke maand de stand van zaken.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="blok mist" aria-labelledby="os-kop">
+  <div class="wrap">
+    <h2 id="os-kop">Gebouwd op open source</h2>
+    <p class="lede">Beproefde open-source software in plaats van dure licenties. Uw geld gaat naar mensen in Suriname, u zit nooit vast aan één leverancier, en wat we doen is controleerbaar.</p>
+    <ul class="stack">
+      <li><strong>Wazuh</strong><span>detectie en monitoring van werkplekken en servers</span></li>
+      <li><strong>OpenSearch</strong><span>opslag en doorzoeken van logs</span></li>
+      <li><strong>Suricata en Zeek</strong><span>analyse van netwerkverkeer</span></li>
+      <li><strong>TheHive en Cortex</strong><span>afhandeling van incidenten</span></li>
+      <li><strong>MISP en OpenCTI</strong><span>dreigingsinformatie delen en ordenen</span></li>
+      <li><strong>SpiderFoot</strong><span>OSINT op uw externe aanvalsoppervlak</span></li>
+      <li><strong>Velociraptor</strong><span>forensisch onderzoek op afstand</span></li>
+    </ul>
+    <p class="noot">Ook deze website is open source. <a href="https://github.com/Suriname-SOC/Suriname-SOC.github.io">Bekijk de broncode op GitHub</a>.</p>
+  </div>
+</section>
+
+{{cta}}

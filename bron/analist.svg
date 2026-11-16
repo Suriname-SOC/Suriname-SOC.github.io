@@ -1,0 +1,60 @@
+<svg class="illus" viewBox="0 0 480 340" role="img" aria-labelledby="illus-analist-t">
+  <title id="illus-analist-t">Een analist met koptelefoon bewaakt 's avonds drie schermen: logregels, een radar en een melding die wordt afgehandeld.</title>
+  <rect width="480" height="340" rx="12" fill="#183b31"/>
+  <g>
+    <rect x="28" y="22" width="132" height="92" rx="4" fill="#0c221c"/>
+    <g class="sterren" fill="#f8faf8">
+      <circle cx="52" cy="44" r="1.6"/><circle cx="86" cy="36" r="1.2"/><circle cx="118" cy="54" r="1.8"/>
+      <circle cx="140" cy="38" r="1.2"/><circle cx="70" cy="70" r="1.2"/><circle cx="104" cy="84" r="1.5"/>
+    </g>
+    <path d="M118 96c10-6 20-6 30 0" stroke="#f1be2b" stroke-width="2" fill="none" opacity=".7"/>
+    <rect x="28" y="22" width="132" height="92" rx="4" fill="none" stroke="#2c5f4c" stroke-width="5"/>
+    <line x1="94" y1="22" x2="94" y2="114" stroke="#2c5f4c" stroke-width="4"/>
+    <g fill="#1f4a3a"><rect x="6" y="20" width="18" height="96" rx="2"/><rect x="164" y="20" width="18" height="96" rx="2"/></g>
+    <g stroke="#12302a" stroke-width="2"><path d="M8 32h14M8 44h14M8 56h14M8 68h14M8 80h14M8 92h14M8 104h14M166 32h14M166 44h14M166 56h14M166 68h14M166 80h14M166 92h14M166 104h14"/></g>
+  </g>
+  <ellipse class="scherm-gloed" cx="240" cy="258" rx="190" ry="16" fill="#2f6a51" opacity=".45"/>
+  <g>
+    <rect x="62" y="112" width="116" height="78" rx="6" fill="#0c221c" stroke="#2c5f4c" stroke-width="4"/>
+    <clipPath id="clip-log"><rect x="70" y="120" width="100" height="62"/></clipPath>
+    <g clip-path="url(#clip-log)">
+      <g class="scroll-log" fill="#6fae8f">
+        <rect x="72" y="124" width="70" height="4" rx="2"/><rect x="72" y="134" width="52" height="4" rx="2"/>
+        <rect x="72" y="144" width="84" height="4" rx="2" fill="#f1be2b"/><rect x="72" y="154" width="60" height="4" rx="2"/>
+        <rect x="72" y="164" width="76" height="4" rx="2"/><rect x="72" y="174" width="44" height="4" rx="2"/>
+        <rect x="72" y="184" width="70" height="4" rx="2"/><rect x="72" y="194" width="52" height="4" rx="2"/>
+        <rect x="72" y="204" width="84" height="4" rx="2" fill="#f1be2b"/><rect x="72" y="214" width="60" height="4" rx="2"/>
+        <rect x="72" y="224" width="76" height="4" rx="2"/><rect x="72" y="234" width="44" height="4" rx="2"/>
+      </g>
+    </g>
+    <rect x="112" y="190" width="16" height="20" fill="#2c5f4c"/><rect x="96" y="208" width="48" height="6" rx="3" fill="#2c5f4c"/>
+  </g>
+  <g>
+    <rect x="178" y="88" width="124" height="104" rx="6" fill="#0c221c" stroke="#2c5f4c" stroke-width="4"/>
+    <g fill="none" stroke="#2f6a51" stroke-width="1.5"><circle cx="240" cy="140" r="40"/><circle cx="240" cy="140" r="26"/><circle cx="240" cy="140" r="12"/><path d="M200 140h80M240 100v80"/></g>
+    <clipPath id="clip-radar"><circle cx="240" cy="140" r="40"/></clipPath>
+    <g clip-path="url(#clip-radar)"><path class="radar" d="M240 140 L240 98 A42 42 0 0 1 276 118 Z" fill="#6fae8f" opacity=".45"/></g>
+    <circle cx="258" cy="124" r="3.5" fill="#f1be2b"/>
+    <rect x="232" y="192" width="16" height="20" fill="#2c5f4c"/><rect x="214" y="208" width="52" height="6" rx="3" fill="#2c5f4c"/>
+  </g>
+  <g>
+    <rect x="302" y="112" width="116" height="78" rx="6" fill="#0c221c" stroke="#2c5f4c" stroke-width="4"/>
+    <g fill="#2f6a51"><rect x="312" y="122" width="96" height="10" rx="2"/><rect x="312" y="138" width="70" height="6" rx="2"/><rect x="312" y="150" width="82" height="6" rx="2"/></g>
+    <g class="alarm" opacity="0"><rect x="312" y="160" width="96" height="22" rx="4" fill="#b5362b"/><rect x="356" y="164" width="4" height="9" rx="2" fill="#f8faf8"/><circle cx="358" cy="177" r="2" fill="#f8faf8"/></g>
+    <g class="opgelost" opacity="0"><rect x="312" y="160" width="96" height="22" rx="4" fill="#2f6a51"/><path d="M351 171l5 5 10-10" stroke="#f8faf8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <rect x="352" y="190" width="16" height="20" fill="#2c5f4c"/><rect x="336" y="208" width="48" height="6" rx="3" fill="#2c5f4c"/>
+  </g>
+  <rect x="34" y="246" width="412" height="12" rx="3" fill="#2c5f4c"/>
+  <g fill="#1f4a3a"><rect x="52" y="258" width="10" height="82"/><rect x="418" y="258" width="10" height="82"/></g>
+  <path d="M168 246h40l4-8h-48z" fill="#12302a"/>
+  <g>
+    <rect x="188" y="252" width="100" height="88" rx="18" fill="#12302a"/>
+    <path d="M200 340c0-46 14-80 38-80s38 34 38 80z" fill="#1f4a3a"/>
+    <g class="hoofd-knik">
+      <circle cx="238" cy="232" r="22" fill="#6b4430"/>
+      <path d="M216 230c0-16 10-26 22-26s22 10 22 26c-4-8-12-12-22-12s-18 4-22 12z" fill="#1b1410"/>
+      <path d="M213 236c0-22 11-34 25-34s25 12 25 34" stroke="#0c221c" stroke-width="4" fill="none"/>
+      <rect x="208" y="230" width="9" height="16" rx="4" fill="#f1be2b"/><rect x="259" y="230" width="9" height="16" rx="4" fill="#f1be2b"/>
+    </g>
+  </g>
+</svg>

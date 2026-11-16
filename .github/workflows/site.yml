@@ -26,6 +26,8 @@ jobs:
         with: { node-version: 22, cache: npm }
       - run: npm ci
       - run: npm run check:html
+      - name: Gegenereerde pagina's zijn actueel
+        run: python3 bron/bouw.py && git diff --exit-code -- '*.html'
 
   spelling:
     name: Spelling (NL)
@@ -110,7 +112,7 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with: { persist-credentials: false }
-      - run: mkdir _site && cp -r index.html 404.html assets _site/
+      - run: mkdir _site && cp -r *.html assets _site/
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
         with: { path: _site }
 

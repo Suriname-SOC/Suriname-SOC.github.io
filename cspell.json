@@ -1,7 +1,46 @@
 {
   "version": "0.2",
   "language": "nl,en",
-  "import": ["@cspell/dict-nl-nl/cspell-ext.json"],
-  "ignorePaths": ["node_modules", "package-lock.json", "assets/fonts", "*.svg"],
-  "words": ["gasketen", "MISP", "nepdomeinen", "Suricata", "Wazuh", "OpenCTI", "SpiderFoot", "Velociraptor", "TheHive", "OpenSearch", "Zeek", "Bricolage", "Hendriks", "Verhoef", "Paramaribo", "OSINT", "SIEM", "WCAG", "gitleaks", "zizmor", "lychee", "cspell", "Lighthouse", "axe", "pilotplekken", "pilotklant"]
+  "import": [
+    "@cspell/dict-nl-nl/cspell-ext.json"
+  ],
+  "ignorePaths": [
+    "node_modules",
+    "package-lock.json",
+    "assets/fonts",
+    "*.svg"
+  ],
+  "words": [
+    "gasketen",
+    "MISP",
+    "nepdomeinen",
+    "Suricata",
+    "Wazuh",
+    "OpenCTI",
+    "SpiderFoot",
+    "Velociraptor",
+    "TheHive",
+    "OpenSearch",
+    "Zeek",
+    "Bricolage",
+    "Hendriks",
+    "Verhoef",
+    "Paramaribo",
+    "OSINT",
+    "SIEM",
+    "WCAG",
+    "gitleaks",
+    "zizmor",
+    "lychee",
+    "cspell",
+    "Lighthouse",
+    "axe",
+    "pilotplekken",
+    "pilotklant",
+    "labomgeving",
+    "analisttraject",
+    "tweestapsverificatie",
+    "logregels",
+    "suriname"
+  ]
 }

@@ -17,3 +17,13 @@ Elke push en pull request draait deze checks; alleen als alles groen is wordt `m
 Lokaal: `npm ci`, dan `npm run check:html`, `check:spelling`, `check:a11y`, `check:lighthouse`.
 
 Lettertypen: Bricolage Grotesque en Public Sans, SIL Open Font License (zie `assets/fonts`). Logo is tijdelijk.
+
+## Pagina's bouwen
+
+De pagina's (`index.html`, `diensten.html`, `academy.html`, `over.html`, `contact.html`, `privacy.html`) worden gegenereerd uit `bron/`. Kop, privacymelding, menu en voet staan in `bron/bouw.py`; de inhoud per pagina in `bron/pagina-*.html`, gedeelde blokken in `bron/deel-*.html` en de illustraties in `bron/*.svg`.
+
+```sh
+python3 bron/bouw.py
+```
+
+De CI faalt als de gegenereerde pagina's niet overeenkomen met `bron/`. `presentatie.html` en `404.html` zijn met de hand geschreven.

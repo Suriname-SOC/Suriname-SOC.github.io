@@ -4,10 +4,11 @@
   "description": "Website SOC Suriname: statische HTML met kwaliteitschecks",
   "scripts": {
     "serve": "http-server . -p 4173 -s",
-    "check:html": "html-validate index.html 404.html",
+    "check:html": "html-validate *.html",
     "check:spelling": "cspell --no-progress \"**/*.{html,md}\"",
     "check:a11y": "playwright test",
-    "check:lighthouse": "lhci autorun"
+    "check:lighthouse": "lhci autorun",
+    "check:bouw": "python3 bron/bouw.py && git diff --exit-code -- '*.html'"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.14.0",

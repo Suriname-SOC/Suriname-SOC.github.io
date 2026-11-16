@@ -2,7 +2,12 @@
 const { test, expect } = require("@playwright/test");
 const AxeBuilder = require("@axe-core/playwright").default;
 
-const paginas = ["/", "/404.html"];
+const paginas = ["/", "/diensten.html", "/academy.html", "/over.html", "/contact.html", "/privacy.html", "/presentatie.html", "/404.html"];
+
+// Poort overslaan in de meeste tests; de poort zelf heeft een eigen test.
+test.beforeEach(async ({ page }, info) => {
+  if (!info.title.includes("poort")) await page.addInitScript(() => sessionStorage.setItem("poort-open", "1"));
+});
 
 for (const pad of paginas) {
   test(`geen toegankelijkheidsfouten op ${pad}`, async ({ page }) => {
@@ -19,10 +24,14 @@ test("klok toont tijd in Paramaribo", async ({ page }) => {
   await expect(page.locator("#nu-label")).toHaveText(/^Nu \d{2}:\d{2} in Paramaribo$/);
 });
 
-test("ankerlinks in menu verwijzen naar bestaande secties", async ({ page }) => {
+test("ankerlinks verwijzen naar bestaande secties", async ({ page }) => {
   await page.goto("/");
-  const hrefs = await page.locator("nav a").evaluateAll((as) => as.map((a) => a.getAttribute("href")));
-  for (const h of hrefs) await expect(page.locator(h)).toHaveCount(1);
+  const hrefs = await page.locator("a[href]").evaluateAll((as) => as.map((a) => a.getAttribute("href")));
+  for (const h of hrefs.filter((h) => h.includes("#") && !h.startsWith("http"))) {
+    const [pad, anker] = h.split("#");
+    await page.goto("/" + (pad || ""));
+    await expect(page.locator("#" + anker), h).toHaveCount(1);
+  }
 });
 
 test("geen horizontale scroll op mobiel", async ({ page }) => {
@@ -35,6 +44,29 @@ test("geen horizontale scroll op mobiel", async ({ page }) => {
 test("geen externe verzoeken (privacy: geen trackers of CDN's)", async ({ page }) => {
   const extern = [];
   page.on("request", (req) => { if (!req.url().startsWith("http://localhost")) extern.push(req.url()); });
-  await page.goto("/", { waitUntil: "networkidle" });
+  for (const pad of paginas) await page.goto(pad, { waitUntil: "networkidle" });
   expect(extern).toEqual([]);
+});
+
+test("poort toont privacymelding en opent de luiken", async ({ page }) => {
+  await page.goto("/");
+  const poort = page.getByRole("dialog", { name: "Eerst even over uw privacy" });
+  await expect(poort).toBeVisible();
+  const r = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"]).analyze();
+  expect(r.violations.map((v) => `${v.id}: ${v.help}`)).toEqual([]);
+  await expect(page.getByRole("button", { name: "Open de luiken" })).toBeFocused();
+  await page.getByRole("button", { name: "Open de luiken" }).click();
+  await expect(poort).toHaveCount(0, { timeout: 4000 });
+  await page.goto("/diensten.html");
+  await expect(page.locator("#poort")).toHaveCount(0);
+});
+
+test("presentatie bladert met pijltjestoets", async ({ page, isMobile }) => {
+  test.skip(isMobile, "op mobiel staan de dia's onder elkaar");
+  await page.goto("/presentatie.html");
+  await expect(page.locator("#teller")).toHaveText("1 / 11");
+  await page.keyboard.press("ArrowRight");
+  await expect(page.locator("#teller")).toHaveText("2 / 11");
+  await expect(page.locator("#dia-2")).toBeVisible();
+  await expect(page.locator("#dia-1")).toBeHidden();
 });
