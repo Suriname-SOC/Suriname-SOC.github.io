@@ -1,0 +1,34 @@
+---
+title: ""
+---
+
+::: {.hero}
+[In oprichting]{.status}
+
+# Cyberbeveiliging uit Suriname, door Surinaams talent
+
+[Een lokaal Security Operations Center (SOC) dat netwerken en systemen bewaakt, gecombineerd met een Cyber Academy die analisten opleidt. Zelfde taal, zelfde tijdzone, respons op locatie.]{.lead}
+:::
+
+::: {.cards}
+::: {.card-x}
+### SOC-diensten
+Monitoring, detectie en incidentrespons voor banken, energie, telecom, overheid en middelgrote bedrijven. [Meer →](diensten.qmd)
+:::
+::: {.card-x}
+### Cyber Academy
+Praktijkgericht traject tot SOC-analist, afgesloten met een stage in een werkend SOC. [Meer →](academy.qmd)
+:::
+::: {.card-x}
+### Voor Nederland
+Nederlandstalige analistencapaciteit voor Nederlandse SOC's, juist in de avond- en nachturen. [Meer →](diensten.qmd#voor-nederlandse-socs)
+:::
+:::
+
+## Waarom
+
+Suriname digitaliseert snel en de olie- en gassector groeit. Tegelijk zijn er weinig gespecialiseerde securityprofessionals en kiezen organisaties nu tussen monitoring op afstand of interne IT zonder security-specialisatie. Wij bouwen die capaciteit lokaal op, en houden het werk en de kennis in Suriname.
+
+## Samen starten
+
+We zoeken **pilotklanten**, **werkgevers** die medewerkers willen laten opleiden en **partners** in Suriname en Nederland. [Neem contact op](contact.qmd).

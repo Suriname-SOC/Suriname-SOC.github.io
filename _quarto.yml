@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: _site
+
+lang: nl
+
+website:
+  title: "SOC Suriname"
+  description: "Lokaal Security Operations Center en Cyber Academy in Paramaribo"
+  site-url: "https://suriname-soc.github.io"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: diensten.qmd
+        text: Diensten
+      - href: academy.qmd
+        text: Cyber Academy
+      - href: over.qmd
+        text: Over ons
+      - href: contact.qmd
+        text: Contact
+  page-footer:
+    left: "© 2026 SOC Suriname (werknaam)"
+    right: "Paramaribo · Nederland"
+
+format:
+  html:
+    theme: [cosmo, styles.scss]
+    toc: false
+    page-layout: article
