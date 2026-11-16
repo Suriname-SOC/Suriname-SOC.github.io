@@ -16,7 +16,7 @@
     "@lhci/cli": "^0.14.0",
     "@playwright/test": "^1.65.1",
     "cspell": "^8.17.0",
-    "html-validate": "^9.4.0",
+    "html-validate": "^11.21.1",
     "http-server": "^14.1.1"
   }
 }
