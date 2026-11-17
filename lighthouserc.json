@@ -5,8 +5,7 @@
       "url": [
         "/index.html",
         "/diensten.html",
-        "/academy.html",
-        "/presentatie.html"
+        "/academy.html"
       ],
       "numberOfRuns": 3
     },

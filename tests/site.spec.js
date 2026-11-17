@@ -2,7 +2,7 @@
 const { test, expect } = require("@playwright/test");
 const AxeBuilder = require("@axe-core/playwright").default;
 
-const paginas = ["/", "/diensten.html", "/academy.html", "/over.html", "/contact.html", "/privacy.html", "/presentatie.html", "/404.html"];
+const paginas = ["/", "/diensten.html", "/academy.html", "/over.html", "/contact.html", "/privacy.html", "/404.html"];
 
 // Poort overslaan in de meeste tests; de poort zelf heeft een eigen test.
 test.beforeEach(async ({ page }, info) => {
@@ -61,12 +61,7 @@ test("poort toont privacymelding en opent de luiken", async ({ page }) => {
   await expect(page.locator("#poort")).toHaveCount(0);
 });
 
-test("presentatie bladert met pijltjestoets", async ({ page, isMobile }) => {
-  test.skip(isMobile, "op mobiel staan de dia's onder elkaar");
+test("oude presentatie-url stuurt door naar de pitch", async ({ page }) => {
   await page.goto("/presentatie.html");
-  await expect(page.locator("#teller")).toHaveText("1 / 11");
-  await page.keyboard.press("ArrowRight");
-  await expect(page.locator("#teller")).toHaveText("2 / 11");
-  await expect(page.locator("#dia-2")).toBeVisible();
-  await expect(page.locator("#dia-1")).toBeHidden();
+  await expect(page).toHaveURL(/\/pitch\/(#.*)?$/);
 });

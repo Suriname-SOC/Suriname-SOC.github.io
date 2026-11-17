@@ -26,4 +26,4 @@ De pagina's (`index.html`, `diensten.html`, `academy.html`, `over.html`, `contac
 python3 bron/bouw.py
 ```
 
-De CI faalt als de gegenereerde pagina's niet overeenkomen met `bron/`. `presentatie.html` en `404.html` zijn met de hand geschreven.
+De CI faalt als de gegenereerde pagina's niet overeenkomen met `bron/`. `404.html` is met de hand geschreven. `pitch/index.html` is de presentatie; `presentatie.html` stuurt alleen door naar `pitch/` zodat oude links blijven werken.

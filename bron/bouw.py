@@ -34,7 +34,7 @@ MENU = [
     ("diensten", "diensten.html", "Diensten en pakketten"),
     ("academy", "academy.html", "Academy"),
     ("over", "over.html", "Over ons"),
-    ("presentatie", "presentatie.html", "Presentatie"),
+    ("presentatie", "pitch/", "Presentatie"),
 ]
 
 STER = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f1be2b" '
@@ -122,7 +122,7 @@ VOET = """
         <h2>Organisatie</h2>
         <ul>
           <li><a href="over.html">Over ons</a></li>
-          <li><a href="presentatie.html">Presentatie</a></li>
+          <li><a href="pitch/">Presentatie</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="privacy.html">Privacy</a></li>
         </ul>
