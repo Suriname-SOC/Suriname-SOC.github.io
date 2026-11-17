@@ -21,7 +21,7 @@
       poort.remove();
       var h1 = document.querySelector("main h1");
       if (h1) h1.focus({ preventScroll: true });
-    }, snel ? 260 : 1600);
+    }, snel ? 260 : 3500);
   }
 
   if (poort && html.classList.contains("poort-dicht")) {
